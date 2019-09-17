@@ -153,7 +153,7 @@ GET student whose id is 00909693. Returns:
 }
 ```
 
-![](images/GetResponses.png)
+![](images/GETResponses.png)
 
 ---
 
