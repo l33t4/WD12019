@@ -235,6 +235,17 @@ Run and understand the REST API demo.
 - It saves time having to create HTML forms, etc.
 - Postman demo with REST API...
 
+[@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONE)
+
+
+
+---
+@title[REST API with a DB]
+###  REST API with a DB
+
+Run and Describe [RESTAPI DB Demo](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONEdb)
+
+
 
 ---?color=black
 @title[The End]
