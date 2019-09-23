@@ -227,7 +227,7 @@ Run and understand the REST API demo.
 [@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONE)
 
 ---
-@title[Exercise]
+@title[POSTMAN]
 ### POSTMAN
 
 - The **Postman** Chrome extension helps send and receive HTTP requests
@@ -245,6 +245,25 @@ Run and understand the REST API demo.
 
 Run and Describe [RESTAPI DB Demo](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONEdb)
 
+
+
+---
+@title[Exercise]
+### Exercise
+
+Run and understand the REST API DB demo.
+
+[@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONEdb)
+
+
+---
+@title[Exercise]
+### Exercise
+
+- Update the REST API DB demo to show all teams in a HTML table in Home page
+- Update the REST API DB demo to ``POST``, ``PUT`` and ``DELETE``
+
+[@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONEdb)
 
 
 ---?color=black
