@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.route('/team/:id?')
   .get(function (req, res) {  
     res.status(200);  // 200 OK; 404 Not Found
-    res.send(`GET /team/${req.params.id} received`);
+    res.send(`GET /team/${req.params.id} received.`);
     console.log(req.params.id);
   })
   .post(function (req, res) { // add
