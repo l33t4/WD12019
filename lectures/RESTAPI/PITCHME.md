@@ -217,14 +217,23 @@ Jane changed her name to Jane Bloggs
 Run and Describe [RESTAPI Demo](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONE)
 
 
-
 ---
 @title[Exercise]
 ### Exercise
 
+
 Run and understand the REST API demo.
 
 [@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/restapi/restapiONE)
+
+---
+@title[Exercise]
+### POSTMAN
+
+- The **Postman** Chrome extension helps send and receive HTTP requests
+- We can use it to test the functionality of a REST API server
+- It saves time having to create HTML forms, etc.
+- Postman demo with REST API...
 
 
 ---?color=black
