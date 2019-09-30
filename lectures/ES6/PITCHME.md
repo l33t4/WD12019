@@ -22,6 +22,7 @@ ECMAScript 6 (ES6)
 - ES6 Classes
 - Modules & import & export
 
+@olend
 
 ---
 @title[Contents]
@@ -34,6 +35,8 @@ ECMAScript 6 (ES6)
 - ES6 Functions
 - ES6 Classes
 - Modules & import & export
+
+@olend
 
 
 ---
@@ -124,6 +127,7 @@ ECMAScript 6 (ES6)
 - ES6 Classes
 - Modules & import & export
 
+@olend
 
 
 ---
@@ -173,6 +177,7 @@ _Function Default Parameter_ feature doesn't work in IE11
 - ES6 Classes
 - Modules & import & export
 
+@olend
 
 
 ---
@@ -353,6 +358,8 @@ console.log("age = " + age); //concatenation
 - ES6 Classes
 - Modules & import & export
 
+@olend
+
 
 ---
 @title[Contents]
@@ -445,11 +452,12 @@ console.log("age = " + age); //concatenation
 [@fa[external-link]](http://localhost/ES6/default3.html)
 
 ---
-To be continued...
+To be continued....
 
 
 ---?color=black
 @title[Title]
+
 
 @snap[west headline text-white span-70]
 ES6
