@@ -452,6 +452,156 @@ console.log("age = " + age); //concatenation
 [@fa[external-link]](http://localhost/ES6/default3.html)
 
 ---
+...
+
+---
+
+@title[JavaScript Functions]
+### JavaScript Functions
+
+@ul[](true)
+- JavaScript functions are defined with the ``function`` keyword
+- You can use a function @size[1.5em](declaration) or a function @size[1.5em](expression)
+- For example...
+
+
+---
+@title[Contents]
+### ES6 Functions
+
+@ul[](false)
+- Default Function Parameters
+- **Function Declarations**
+- **Function Expressions**
+- Arrow Functions
+@ulend
+
+
+---
+@title[Functions Declarations]
+### Function Declarations
+
+@ul[](false)
+- Declared functions have the following syntax:
+@ulend
+
+```javascript
+function add(x,y)
+{
+  return x+y;
+}
+
+var ans = add(1,2); // ans=3
+```
+
+
+---
+@title[Function Expressions]
+### Function Expressions
+
+@ul[](false)
+- Function expressions have the following syntax:
+@ulend
+
+```javascript
+var add = function(x,y)
+{
+  return x+y;
+};
+
+var ans = add(1,2); // ans=3
+```
+
+@ul[](true)
+- The function above is actually an anonymous function assigned to variable ``add``
+@ulend
+
+
+---
+@title[Function Declaration v Expression]
+### Function Declaration v Expression
+
+@ul[](true)
+- They are more @size[1.5em](similar) than different
+- You call them the same way
+- They are just different @size[1.5em](styles) of writing functions
+- But, you'll see function expression style more frequently from here
+- Which one you chose is almost entirely a matter of personal taste
+- But there are some differences...
+@ulend
+
+
+---
+@title[Function Declaration v Expression]
+### Function Declaration v Expression
+
+@ul[](false)
+- Function declarations execute @size[1.5em](before) function calls
+- This works..
+@ulend
+
+```javascript
+console.log(add(1,2)); // OK! add was HOISTED
+
+function add(x,y) { 
+  return x+y;
+}
+```
+@[3-5](1st)
+@[1](2nd)
+@[3-5,1]()
+
+
+@ul[](true)
+- This is known as **hoisting**
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/function2.html)
+
+
+---
+@title[Hoisting]
+### Hoisting
+@ul[](true)
+- JavaScript by default moves all @size[1.5em](declarations) to the top of the current scope
+- This includes variable and function declarations
+- Because of this, JavaScript @size[1.5em](functions) can be called before they are declared
+- and JavaScript @size[1.5em](variables) can be assigned values before they are declared
+- Declarations made with ``let`` or ``const`` are not hoisted!
+ 
+@ulend
+
+
+---
+@title[Function Declaration v Expression]
+### Function Declaration v Expression
+
+@ul[](true)
+- Function expressions execute only when the interpreter reaches them
+- Function expressions have no name - anonymous
+- For example...
+@ulend
+
+```javascript
+console.log(add(1,2)); // ERROR! add not loaded yet
+        
+var add = function (x,y) { 
+  return x+y;
+}
+
+console.log(add(1,2)); // OK! add loaded
+```
+@[1](1st)
+@[1,3-5](2nd)
+@[1,3-5,7](3rd)
+
+@ul[](true)
+- Functions expressions are not hoisted
+@ulend
+
+
+
+---
 To be continued....
 
 
