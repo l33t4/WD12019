@@ -599,6 +599,88 @@ console.log(add(1,2)); // OK! add loaded
 - Functions expressions are not hoisted
 @ulend
 
+---
+@title[Contents]
+### ES6 Functions
+
+@ul[](false)
+- Default Function Parameters
+- Function Declarations
+- Function Expressions
+- **Arrow Functions**
+@ulend
+
+
+---
+@title[Arrow Functions]
+### Arrow Functions
+
+@ul[](true)
+- Arrow functions are an @size[1.5em](abbreviated) syntax for function expressions
+- You don't need:
+  - the ``function`` keyword
+  - the ``return`` keyword
+  - the curly brackets
+- It's a new token **=>** 
+- For example, let's look at the ``add()`` function again...
+@ulend
+
+
+---
+@title[Arrow Functions]
+### Arrow Functions
+
+@ul[](false)
+- Regular ``add()`` function expression
+@ulend
+
+```javascript     
+var add = function (x,y) { 
+  return x+y;
+}
+
+console.log(add(1,2));
+```
+
+---
+@title[Arrow Functions]
+### Arrow Functions
+
+@ul[](false)
+- Abbreviated arrow function
+@ulend
+
+```javascript     
+var add = (x,y) => { 
+  return x+y;
+}
+
+console.log(add(1,2));
+```
+@ul[](true)
+- Because this is a single statement function you could further abbreviate to...
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/arrow1.html)
+
+---
+@title[Arrow Functions]
+### Arrow Functions
+
+@ul[](false)
+- Abbreviated arrow function
+@ulend
+
+```javascript     
+var add = (x,y) => x+y;
+
+console.log(add(1,2));
+```
+@ul[](true)
+- I'll continue to use ``return`` and curly braces for clarity
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/arrow2.html)
 
 
 ---
