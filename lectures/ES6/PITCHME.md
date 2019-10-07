@@ -684,6 +684,235 @@ console.log(add(1,2));
 
 
 ---
+@title[Map Function]
+### map Function
+
+@ul[](true)
+- ``map()`` is used with arrays
+- ``map()`` it creates a new array from an existing array using a function
+- Let's see an example...
+@ulend
+
+---
+@title[Map Function]
+### map Function
+
+```javascript     
+var numbers = [1,2,3,4,5];
+
+var sqr = function(num) {
+  return num*num;
+}
+
+var values = numbers.map(sqr);
+console.log(values);
+```
+@[1](numbers array)
+@[1,3-5](function to apply to numbers array)
+@[1,3-5,7](map each numbers value to sqr function)
+@[*]
+
+
+@ul[](true)
+- Often you'll see arrow function syntax used...
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/map1.html)
+
+
+
+
+---
+@title[Map Function]
+### map Function
+
+```javascript     
+var numbers = [1,2,3,4,5];
+
+var values = numbers.map((num) => { return num*num; });
+console.log(values);
+```
+@ul[](true)
+- We could abbreviate more with this...
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/map2.html)
+
+---
+@title[Map Function]
+### map Function
+
+```javascript     
+var numbers = [1,2,3,4,5];
+
+var values = numbers.map(num => num*num);
+console.log(values);
+```
+@ul[](true)
+- This works because it is a single statement function
+- But, I'll use ``return`` and curly braces from here on
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/map3.html)
+
+
+
+---
+@title[Exercise 1]
+### Exercise 1 - Fundamentals
+
+[@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/ES6/exercises/ES6Ex1.html)
+
+
+---
+@title[Contents]
+### Contents
+
+@ol[](false)
+- What is ECMAScript 6 (ES6)?
+- Babel.js Transpiler
+- ES6 Syntax
+- ES6 Functions
+- **ES6 Classes**
+- Modules & import & export
+@olend
+
+
+---
+@title[ES6 Classes]
+### ES6 Classes
+
+@ol[](false)
+- Create a Class
+- Constructor & Properties
+- Methods
+- Inheritance
+- Getters & Setters
+@olend
+
+
+---
+@title[Classes]
+### Create a Class
+
+```javascript     
+class Person {    
+}
+
+var person = new Person();    
+```
+@[1-2](Declare class)
+@[1-2,4](Create an instance of class)
+@[*]()
+
+@ul[](true)
+- Class declarations are not hoisted
+- So, declare first and then use it
+@ulend
+
+
+---
+@title[Classes]
+### Class Constructor & Properties 
+
+```javascript     
+class Person {    
+  constructor(name,age) {
+    this.name=name;
+    this.age=age;
+  }
+}
+var person = new Person("Joe",21);    
+console.log(person);
+```
+@[1-6](Use constructor to initialise properties)
+@[1-6,7,8](Create an instance of Person)
+@[*]()
+
+@ul[](true)
+- The ``constructor`` method creates and initialises class properties
+@ulend
+
+[@fa[external-link]](http://localhost/ES6/class2.html)
+
+---
+@title[Classes]
+### Class Methods
+
+```javascript     
+class Person {    
+  constructor(name,age) {
+    this.name=name;
+    this.age=age;
+  }
+  info(){
+    console.log(`[name=${this.name}, age=${this.age}]`); 
+  }
+}
+var person = new Person("Joe",21);    
+person.info();    
+```
+@[6-8](an info method)
+@[6-8,10-11](call it)
+@[*]()
+
+[@fa[external-link]](http://localhost/ES6/class3.html)
+
+---
+@title[Classes]
+### Class Inheritance
+
+@ul[](false)
+- Let's extend from `Person`
+@ulend
+
+```javascript     
+class Student extends Person{
+  constructor(name, age){
+    super(name,age);
+  }
+}
+var student = new Student("Mary",21);    
+student.info();  // info() inherited from Person
+```
+@[1,5](Student extends Person)
+@[1,5,2-4](Student constructor)
+@[1,5,2-4,6-7](Create student object and call method info)
+@[*]()
+
+[@fa[external-link]](http://localhost/ES6/class4.html)
+
+---
+@title[Classes]
+### Class Getters & Setters
+
+```javascript     
+class Person {    
+    constructor(name,age) {
+        this.name=name;this.age=age;
+    }
+    info(){console.log(`[name=${this.name}, age=${this.age}]`);}
+    get getAge(){
+        return this.age; 
+    }
+    set setAge(age){
+        this.age=age;
+    }
+}
+var person = new Person("Joe",21);    
+console.log(person.getAge);  // no parentheses
+person.setAge=22;            // no parentheses
+person.info(); 
+```
+@[6-8](getter)
+@[9-11](setter)
+@[*]()
+
+[@fa[external-link]](http://localhost/ES6/class5.html)
+
+
+
+---
 To be continued....
 
 
