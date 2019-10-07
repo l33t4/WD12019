@@ -761,7 +761,7 @@ console.log(values);
 @title[Exercise 1]
 ### Exercise 1 - Fundamentals
 
-[@fa[external-link]](https://github.com/barcaxi/WD12019/tree/master/ES6/exercises/ES6Ex1.html)
+[@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ES6/exercises/ES6Ex1.md)
 
 
 ---
