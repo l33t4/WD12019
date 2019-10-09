@@ -913,7 +913,207 @@ person.info();
 
 
 ---
-To be continued....
+@title[Contents]
+### Contents
+
+@ol[](false)
+- What is ECMAScript 6 (ES6)?
+- Babel.js Transpiler
+- ES6 Syntax
+- ES6 Functions
+- ES6 Classes
+- **Modules & import & export**
+@olend
+
+---
+@title[import]
+### import & export
+
+@ul[](true)
+- ES6 supports the `import` keyword
+- import is used to import @size[em](functions), @size[em](classes), etc. exported by another module
+- For example, let's put our `Person` class in a module of it's own...
+@ulend
+
+---
+@title[import]
+### import & export
+
+```javascript     
+// Person.js
+class Person {    
+  constructor(name,age) {
+    this.name=name;
+    this.age=age;
+  }
+  info(){
+    console.log(`Person: [name=${this.name}, age=${this.age}]`);
+  }
+}
+```
+
+
+@ul[](true)
+- We must `export` the class to outside modules...
+- We can `export` in 2 ways:
+  - **default**
+  - **named**
+@ulend
+
+---
+@title[import]
+### export default
+
+```javascript     
+// Person.js
+export default class Person {    
+  constructor(name,age) {
+    this.name=name;
+    this.age=age;
+  }
+  info(){
+    console.log(`Person: [name=${this.name}, age=${this.age}]`);
+  }
+}
+```
+@[2,10](Person is default export)
+@[*]()
+
+@ul[](true)
+- So we import like this...
+@ulend
+
+---
+@title[import]
+### import default
+
+```javascript     
+// testPerson.js
+import Person from './Person.js';
+
+var person = new Person("Joe",21);    
+person.info();    
+```
+@[2](import Person class to Person reference)
+@[*]()
+
+@ul[](true)
+- Only one class/function in a module can be the `default`
+- We can export things as **named** too...
+@ulend
+
+---
+@title[import]
+### export named
+
+```javascript     
+// Person.js
+export default class Person {    
+  ...
+}
+class Student extends Person {
+    constructor(name, age, studentNumber){
+        super(name,age);
+        this.studentNumber=studentNumber;
+    }
+}
+export { Student };
+```
+@[2-4](Person is the default export)
+@[11](Student is a named export)
+@[*]()
+
+@ul[](true)
+- Export as many named classes/functions as you like
+- We import like this...
+@ulend
+
+---
+@title[import]
+### import named
+
+```javascript     
+// testPerson.js
+import Person from './Person.js';
+import {Student} from './Person.js';
+
+var person = new Person("Joe",21);    
+person.info();  
+
+var student = new Student("Joey",21,"00909693");    
+```
+@[3](import Student class)
+@[3,8](use Student class)
+
+
+@ul[](true)
+- You can export @size[1.5em](functions) too...
+@ulend
+
+---
+@title[import]
+### export named functions
+
+```javascript     
+// Person.js
+export default class Person {    
+  ...
+}
+class Student extends Person {
+  ...
+}
+function sqr(num){
+  return num*num;
+}
+export { Student , sqr };
+```
+@[8,9,10](sqr function)
+@[8,9,10,11](export it as a named function)
+@[*]()
+
+@ul[](true)
+- import like this...
+@ulend
+
+---
+@title[import]
+### import function
+
+```javascript     
+// testPerson.js
+import Person from './Person.js';
+import {Student} from './Person.js';
+import {sqr} from './Person.js';
+
+var person = new Person("Joe",21);    
+person.info();  
+
+var student = new Student("Joey",21,"00909693");    
+student.info();    
+
+console.log(sqr(3));
+```
+@[4](import sqr function)
+@[4,12](use sqr function)
+
+---
+@title[import]
+### import v require() function
+
+@ul[](false)
+- Previously, we did this:
+@ulend
+```javascript
+var express = require('express');
+```
+
+@ul[](false)
+- now we can do this:
+@ulend
+```javascript
+import express from 'express';
+```
+
 
 
 ---?color=black
