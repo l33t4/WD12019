@@ -63,7 +63,7 @@ React.js
 ### Why React.js?
 
 @ul[list-bullets-black](true)
-- React is becoming very popular [*](https://insights.stackoverflow.com/survey/2019/)
+- React is becoming very popular [Source:](https://insights.stackoverflow.com/survey/2019/)
 - It uses a Component based architecture [*](https://twitter.com/lyit)
 - React builds website UI using @size[1.5em](components)
 - @size[1.5em](Components)
