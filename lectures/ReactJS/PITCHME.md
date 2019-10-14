@@ -63,8 +63,8 @@ React.js
 ### Why React.js?
 
 @ul[list-bullets-black](true)
-- React is becoming very popular [_](https://insights.stackoverflow.com/survey/2019/)
-- It uses a Component based architecture [_](https://twitter.com/lyit)
+- React is becoming very popular [src](https://insights.stackoverflow.com/survey/2019/)
+- It uses a Component based architecture [src](https://twitter.com/lyit)
 - React builds website UI using @size[1.5em](components)
 - @size[1.5em](Components)
 - @size[1.75em](Components)
@@ -104,7 +104,7 @@ We are going to need:
 - Install from [Chrome Webstore](https://chrome.google.com/webstore/category/extensions)
 - Search for *React Developer Tools*
 - It helps you:
-  - identify any website you visit that uses React [_](https://www.instagram.com/?hl=en)
+  - identify any website you visit that uses React [src](https://www.instagram.com/?hl=en)
   - provides a React tab in the console
 - Install it now!
 @ulend
