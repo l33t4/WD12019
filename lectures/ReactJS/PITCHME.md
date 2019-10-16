@@ -594,6 +594,57 @@ ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root
 @[10,4](access it within a component like this)
 @[*]()
 
+---
+@title[React Function Components]
+### React Function Components
+
+@ul[list-bullets-black](false)
+- We've seen how to create a component with a @size[1.5em](class)
+- We can also create a component with a @size[1.5em](function)
+- For example...
+@ulend
+
+---
+@title[Component Properties]
+### Component Properties
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+const HelloWorld = function(props) {
+  return(
+    <div>
+     <h1>{props.name} CU in {props.mins} mins</h1>
+    </div>
+  )
+}
+export default HelloWorld;
+...
+ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root'));
+```
+@[4,10](function declaration)
+@[*](everthing else is the same)
+
+---
+@title[Class Components v Function Components]
+### Class v Function Components
+
+@ul[list-bullets-black](true)
+- You may see component functions elsewhere
+- But I'll use component classes instead, because...
+  - a class component has @size[1.5em](state)
+  - a class component has @size[1.5em](lifecycle hooks)
+- We'll explain this next
+@ulend
+
+
+---
+@title[Exercise]
+### React.js Exercise 2 – React Props
+
+[@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx2.md)
+
 
 ---?color=black
 @title[Title]
