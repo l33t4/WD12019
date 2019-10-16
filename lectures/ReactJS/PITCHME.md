@@ -537,6 +537,63 @@ export default HelloWorld;
 - **Component Properties (Props)**
 @olend
 
+---
+@title[Component Properties]
+### Component Properties
+
+@ul[list-bullets-black](true)
+- The previous component `HelloWorld` displayed static content
+- To display a dynamic content use React @size[1.5em](Props)...
+@ulend
+
+
+---
+@title[Component Properties]
+### Component Properties
+
+Component properties (props) are accessible with `this.props` object
+
+```javascript
+class HelloWorld extends React.Component {
+  render() {
+    return (
+      <h1>Hello {this.props.name}</h1>
+    );
+  }
+}
+export default HelloWorld;
+...
+ReactDOM.render(<HelloWorld name="Bob"/>,document.getElementById('root'));
+```
+@[10](pass a name property like this)
+@[10,4](access it with component like this)
+@[*]()
+
+@ul[list-bullets-black](true)
+- Pass multiple properties like this...
+@ulend
+
+
+---
+@title[Component Properties]
+### Component Properties
+
+```javascript
+class HelloWorld extends React.Component {
+  render() {
+    return (
+     <h1>{this.props.name} CU in {this.props.mins} mins</h1>
+    );
+  }
+}
+export default HelloWorld;
+...
+ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root'));
+```
+@[10](use expression syntax {} for non-string properties)
+@[10,4](access it within a component like this)
+@[*]()
+
 
 ---?color=black
 @title[Title]
