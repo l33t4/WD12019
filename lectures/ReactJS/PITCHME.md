@@ -322,6 +322,221 @@ ReactDOM.render(<HelloWorld />,
 @olend
 
 
+---
+@title[What is JSX?]
+### What is JSX?
+
+This is JSX
+
+```javascript
+const element = <h1>Hello, world!</h1>;
+```
+
+@ul[](true)
+- It's a syntax extension to JavaScript
+- React recommends using it to render UI components with elements
+- Let's see why you use it...
+@ulend
+
+---
+@title[JSX]
+### JSX
+Previously our first React Component looked like this:
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class HelloWorld extends React.Component {
+  render() {
+    return (
+      <h1>Hello World!</h1>
+    );
+  }
+}
+export default HelloWorld;
+```
+@[7](JSX creates the `<h1>` element)
+@[*]()
+
+@ul[](true)
+- Without JSX we'd have to do this...
+@ulend
+
+
+---
+@title[JSX]
+### JSX
+We'd need to use the [React.createElement()](https://reactjs.org/docs/react-api.html#createelement) function
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class HelloWorld extends React.Component {
+  render() {
+    return React.createElement('<h1>',null,'Hello World!');
+  }
+}
+export default HelloWorld;
+```
+@[6](using createElement() for the `<h1>` element)
+@[*]()
+
+@ul[](true)
+- Code written with JSX is converted to use `React.createElement()` anyway
+- It would be worse for less simple components..
+@ulend
+
+
+---
+@title[JSX]
+
+A not so complex component using JSX
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class HelloWorld extends React.Component {
+  render() {
+    return(
+      <div id="myDiv">
+        <h1>Hello World!</h1>
+      </div>
+    );   
+  }
+}
+export default HelloWorld;
+```
+@[7-10](JSX)
+@[*]()
+
+
+---
+@title[JSX]
+
+Same component using `React.createElement()`
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class HelloWorld extends React.Component {
+  render() {
+    return React.createElement(
+                 '<div>', 
+                 {id: 'myDiv'}, 
+                 React.createElement('h1',
+                                      null,
+                                      'Hello World!'));
+    );
+  }
+}
+export default HelloWorld;
+```
+@[6-11](!JSX)
+@[*]()
+@ul[](true)
+- You can see why using JSX is better
+@ulend
+
+---
+@title[JSX Expressions]
+### JSX Expressions
+
+<!-- With JSX we can use expressions too -->
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+const name='Bob';
+
+class HelloWorld extends React.Component {
+  render() {
+    return(
+      <div id="myDiv">
+        <h1>Hello {name}</h1>
+      </div>
+    );   
+  }
+}
+export default HelloWorld;
+```
+@[3](name is Bob)
+@[3,5-13](will print Hello Bob)
+@[*]()
+
+
+@ul[](true)
+- Expressions can be code that resolves to any value e.g...
+@ulend
+
+---
+@title[JSX Expressions]
+### JSX Expressions
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class HelloWorld extends React.Component {
+  render() {
+    return(
+      <div id="myDiv">
+        <h1>1+2={1+2}</h1>
+      </div> 
+    );   
+  }
+}
+export default HelloWorld;
+```
+@[7-9]()
+@[*]()
+
+@ul[](true)
+- Another example with a function...
+@ulend
+
+---
+@title[JSX Expressions]
+### JSX Expressions
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
+
+class HelloWorld extends React.Component {
+  add = (num1,num2) => {return num1+num2;}
+
+  render() {
+    return(
+      <div id="myDiv">
+        <h1>1+2={add(1,2)}</h1>
+      </div>
+    );   
+  }
+}
+export default HelloWorld;
+```
+@[4,5,14]()
+@[4,5,14,9-11]()
+@[*]()
+
+
+---
+@title[Contents]
+### Contents
+
+@ol[](false)
+- What is React.js?
+- Why React.js?
+- Setup
+- Your First Component
+- JSX
+- **Component Properties (Props)**
+@olend
+
 
 ---?color=black
 @title[Title]
