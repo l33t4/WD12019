@@ -673,7 +673,7 @@ ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root
 - Specifically, state is data a component has that when changed affects how the component looks and behaves
 - Your components @size[1.5em](react) to changes in state
 - An example...
-@ullist
+@ulend
 
 ---
 @title[State]
@@ -684,7 +684,7 @@ ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root
 @ul[](true)
 - Let's create a simple button component
 - It's caption will be part of its state
-@ullist
+@ulend
 
 
 
@@ -764,7 +764,7 @@ export default MyButton;
 @ul[](false)
 - Let's create a live Clock component...
 
-@ullist
+@ulend
 
 ---
 @title[State]
@@ -784,7 +784,7 @@ setInterval(tick, 1000);
 @ul[](true)
 - Our new Clock component will have its own timer and update itself every second
 - We'll make a Clock component truly **reusable** and **encapsulated**
-@ullist
+@ulend
 
 
 
@@ -824,7 +824,7 @@ export default class Clock extends React.Component {
 
 @ul[](false)
 - Always uses ``this.state`` object for state
-@ullist
+@ulend
 
 ---
 @title[Clock]
@@ -853,7 +853,7 @@ export default class Clock extends React.Component {
 @ul[](true)
 - So far this will display static time
 - Let's update the time every second...
-@ullist
+@ulend
 
 
 ---
@@ -886,7 +886,7 @@ export default class Clock extends React.Component {
 
 @ul[](true)
 - Almost done, but we get this error...
-@ullist
+@ulend
 
 ---
 @title[State]
@@ -898,7 +898,7 @@ export default class Clock extends React.Component {
 - `this` is not a reference to the class anymore
 - `this` is a reference to the `setInterval()` function
 - Two possible solutions...
-@ullist
+@ulend
 
 ---
 @title[State]
@@ -909,7 +909,7 @@ Choose from these 2 solutions:
 @ol[](true)
 - Bind `this` to `tick()` as a reference to the class
 - Use an arrow function for `tick()`
-@ullist
+@ulend
 
 ---
 @title[Clock]
