@@ -646,6 +646,354 @@ ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root
 [@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx2.md)
 
 
+---
+@title[Contents]
+### Contents
+
+@ol[](false)
+- What is React.js?
+- Why React.js?
+- Setup
+- Your First Component
+- JSX
+- Component Properties 
+- **State**
+@olend
+
+
+
+
+---
+@title[State]
+### State
+
+@ul[](true)
+- Component @size[1.5em](state) is a key concept in React
+- State is simply the @size[1.5em](object data) associated with a component
+- Specifically, state is data a component has that when changed affects how the component looks and behaves
+- Your components @size[1.5em](react) to changes in state
+- An example...
+@ullist
+
+---
+@title[State]
+### State
+
+![](lectures/React/images/MyButton.png)
+
+@ul[](true)
+- Let's create a simple button component
+- It's caption will be part of its state
+@ullist
+
+
+
+---
+@title[State]
+### State
+
+```javascript
+import React from 'react';
+
+class MyButton extends React.Component {
+    constructor() {
+      super();
+      this.state = { caption: "hello" };
+    }  
+    render() {
+      return (
+        <button>{this.state.caption}</button>
+      );
+    }
+}
+export default MyButton;
+```
+@[3,13](MyButton component)
+@[3,13,4,7](Has a constructor)
+@[3,13,4,7,5](Always call super())
+@[3,13,4,7,5,6](Create Component State using this.state object)
+@[*](Render the button using this.state.caption)
+
+@ul[](true)
+- ``MyButton`` component has state...
+@ulend
+
+
+---
+@title[State]
+<!-- ### State -->
+
+![](lectures/React/images/MyButton2.png)
+
+
+@ul[](true)
+- Changing the state ``caption`` has this effect...
+@ulend
+
+---
+@title[State]
+<!-- ### State -->
+
+![](lectures/React/images/MyButton3.png)
+
+
+@ul[](true)
+- Changing the state caption changed how the button looked
+@ulend
+
+
+---
+@title[State]
+### State
+
+@ul[](true)
+- Changing state changes how the components look
+- This is a key concept of React
+- This is a powerful concept happening here
+- Component look and behaviour is driven by it's state
+- It's a data (state) driven component model
+- Time for a better example...
+@ulend
+
+---
+@title[State]
+### State
+
+![](lectures/React/images/Clock1.png)
+
+@ul[](false)
+- Let's create a live Clock component...
+
+@ullist
+
+---
+@title[State]
+### Clock (Good old days)
+
+```html
+<div>It is <span id='time'></span></div>
+
+<script>
+function tick() {
+  document.getElementById('time').innerHTML=
+                          new Date().toLocaleTimeString();
+}
+setInterval(tick, 1000);
+</script>
+```
+@ul[](true)
+- Our new Clock component will have its own timer and update itself every second
+- We'll make a Clock component truly **reusable** and **encapsulated**
+@ullist
+
+
+
+---
+@title[Clock]
+### Clock Component
+
+Clock Component class
+
+```javascript
+import React from 'react';
+
+export default class Clock extends React.Component {
+
+}
+```
+
+---
+@title[Clock]
+### Clock Component
+
+Constructor with State
+
+```javascript
+import React from 'react';
+
+export default class Clock extends React.Component {
+  constructor() {
+    super();
+    this.state = {date: new Date()};
+  }
+
+}
+```
+@[4-7]()
+@[*]()
+
+@ul[](false)
+- Always uses ``this.state`` object for state
+@ullist
+
+---
+@title[Clock]
+<!-- ### Clock Component -->
+
+Render it
+
+```javascript
+import React from 'react';
+
+export default class Clock extends React.Component {
+  constructor() {
+    super();
+    this.state = {date: new Date()};
+  }
+  render() {
+    return (
+      <div>{this.state.date.toLocaleTimeString()}</div>
+    );
+  }
+}
+```
+@[8-12]()
+@[*]()
+
+@ul[](true)
+- So far this will display static time
+- Let's update the time every second...
+@ullist
+
+
+---
+@title[Clock]
+<!-- ### Clock Component -->
+
+Update time
+
+```javascript
+export default class Clock extends React.Component {
+  constructor() {
+    super();
+    this.state = {date: new Date()};
+    setInterval(this.tick,1000);
+  }
+  tick() {
+    this.setState( { date: new Date() });
+  }
+  render() {
+    return (
+      <div>{this.state.date.toLocaleTimeString()}</div>
+    );
+  }
+}
+```
+@[2-6]()
+@[5]()
+@[5,7-9](calls tick() every second)
+@[*]()
+
+@ul[](true)
+- Almost done, but we get this error...
+@ullist
+
+---
+@title[State]
+<!-- ### State -->
+
+![](lectures/React/images/Clock2.png)
+
+@ul[](true)
+- `this` is not a reference to the class anymore
+- `this` is a reference to the `setInterval()` function
+- Two possible solutions...
+@ullist
+
+---
+@title[State]
+### this is the end?
+
+Choose from these 2 solutions:
+
+@ol[](true)
+- Bind `this` to `tick()` as a reference to the class
+- Use an arrow function for `tick()`
+@ullist
+
+---
+@title[Clock]
+<!-- ### Clock Component -->
+
+
+Bind `this` to `tick()` 
+
+
+```javascript
+export default class Clock extends React.Component {
+  constructor() {
+    super();
+    this.state = {date: new Date()};
+    this.tick = this.tick.bind(this);
+    setInterval(this.tick,1000);
+  }
+  tick() {
+    this.setState( { date: new Date() });
+  }
+  render() {
+    return (
+      <div>{this.state.date.toLocaleTimeString()}</div>
+    );
+  }
+}
+```
+@[2-7]()
+@[5](the method tick is binded to the class this keyword)
+@[*]()
+
+---
+@title[Clock]
+<!-- ### Clock Component -->
+
+Arrow function ``tick()`` 
+
+```javascript
+export default class Clock extends React.Component {
+  constructor() {
+    super();
+    this.state = {date: new Date()};
+    setInterval(this.tick,1000);
+  }
+  //tick() {
+  tick = () => {
+    this.setState( { date: new Date() });
+  }
+  render() {
+    return (
+      <div>{this.state.date.toLocaleTimeString()}</div>
+    );
+  }
+}
+```
+@[7-10]()
+@[*]()
+
+---
+@title[Clock]
+### Clock Component
+
+Finally, we get to render the Clock component
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Clock from './Clock.js';
+
+ReactDOM.render(<Clock />, document.getElementById('root'));
+```
+@[3]()
+@[3,5]()
+@[*]()
+
+
+---
+@title[Exercise]
+### React.js Exercise 3 – React State
+
+[@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx3.md)
+
+
+
 ---?color=black
 @title[Title]
 
