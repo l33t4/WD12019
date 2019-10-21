@@ -679,7 +679,7 @@ ReactDOM.render(<HelloWorld name="Bob" mins={5} />,document.getElementById('root
 @title[State]
 ### State
 
-![](lectures/React/images/MyButton.png)
+![](images/MyButton.png)
 
 @ul[](true)
 - Let's create a simple button component
