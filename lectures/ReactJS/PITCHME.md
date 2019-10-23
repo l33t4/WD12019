@@ -993,6 +993,62 @@ ReactDOM.render(<Clock />, document.getElementById('root'));
 [@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx3.md)
 
 
+---
+@title[Contents]
+### Contents
+
+@ol[](false)
+- What is React.js?
+- Why React.js?
+- Setup
+- Your First Component
+- JSX
+- Component Properties 
+- State
+- **Event Handling**
+
+@olend
+
+---
+@title[Handling Events]
+### Handling Events
+
+Let's add a `onclick` event to `<MyButton>`...
+
+
+---
+@title[Handling Events]
+<!-- ### Handling Events -->
+
+```javascript
+class MyButton extends React.Component {
+  constructor() {
+    super();
+    this.state = { caption: "hello" };
+  }  
+  change = () => {
+    this.setState ( { caption: "hi" } );
+  }
+  render() {
+    return (
+      <button onClick={this.change}>
+        {this.state.caption}
+      </button>
+    );
+  }
+}
+export default MyButton;
+```
+@[11-13](onClick event calls change method)
+@[11-13,6,7,8](set the caption to hi)
+@[*]()
+
+---
+@title[Exercise]
+### React.js Exercise 4 – React Event Handling - Part 1-3
+
+[@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx5.md)
+
 
 ---?color=black
 @title[Title]
