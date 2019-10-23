@@ -1047,7 +1047,7 @@ export default MyButton;
 @title[Exercise]
 ### React.js Exercise 4 – React Event Handling - Part 1-3
 
-[@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx5.md)
+[@fa[external-link]](https://github.com/barcaxi/WD12019/blob/master/ReactJS/exercises/ReactEx4.md)
 
 
 ---?color=black
