@@ -51,7 +51,7 @@ $ git status
 	- Add splits to `splits` array using array `concat()` function
 
 
-## Part 4 - Timer Revisted 
+<!-- ## Part 4 - Timer Revisted 
 
 1.	Add the [AutoTimer.js](../AutoTimer.js) component to your React project `src` folder.
 
@@ -92,4 +92,4 @@ $ git status
 
 1.	Modify the component to use a ternary operator to render the state of the switch
 
-1.	Modify the component to use the Previous State of the `on` when updating the it
+1.	Modify the component to use the Previous State of the `on` when updating the it -->
