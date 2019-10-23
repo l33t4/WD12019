@@ -16,7 +16,7 @@ $ git status
 
 > Make sure you have the React app running as outlined in the lecture slides.
 	
-1.	Modify the code in [MyButton.js](/MyButton.js) so when the button is clicked the caption changes to "hi" instead
+1.	Modify the code in [MyButton.js](/ReactJS/code/MyButton.js) so when the button is clicked the caption changes to "hi" instead
 
 
 ## Part 2 - Timer  
