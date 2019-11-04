@@ -1242,6 +1242,188 @@ class Timer extends React.Component {
 
 
 
+---
+@title[Contents]
+### Contents
+
+@ol[](false)
+- ...
+- State
+- Event Handling
+- Component Lifecycle
+- **Conditional Rendering**
+@olend
+
+
+---
+@title[Conditional Rendering]
+### Conditional Rendering
+
+@ul[]()
+- We understand an `if` statement like this
+@ulend
+
+```javascript
+var on = true;
+if(on)
+  return 'on';
+else
+  return 'off';
+```
+
+@ul[](true)
+- JavaScript has a shortcut notation for this too
+- It's called a @size[1.5em](ternary) operator...
+@ulend
+
+---
+@title[Conditional Rendering]
+### Conditional Rendering
+
+@ul[]()
+- A ternary operator version
+@ulend
+
+```javascript
+var on = true;
+on ? 'on' : 'off';
+```
+
+@ul[](true)
+- The ternary operator takes three operands
+  - the condition
+  - the expression if true
+  - the expression if false
+- We can use them in React for _conditional rendering_...
+@ulend
+
+
+
+---
+@title[Conditional Rendering]
+### Conditional Rendering
+
+Let's create a `<Switch>` component to toggle on/off
+
+![](/lectures/ReactJS/images/SwitchOff.png)
+<!-- ![](images/SwitchOff.png) -->
+
+![](/lectures/ReactJS/images/SwitchOn.png)
+<!-- ![](images/SwitchOn.png) -->
+
+---
+
+Basic component code:
+```javascript
+import React from 'react';
+
+class Switch extends React.Component {
+  constructor() {
+    super();
+  }
+  render() {
+    return (
+      <div>
+        <button>Toggle</button>
+        <p>The switch is ???</p>
+      </div>
+    );
+  }
+}
+export default Switch;
+```
+@ul()[true]
+- Let's add state for on/off...
+@ulend
+
+---
+
+```javascript
+class Switch extends React.Component {
+  constructor() {
+    super();
+    this.state = { on: false };
+  }
+  render() {
+    return (
+      <div>
+        <button>Toggle</button>
+        <p>The switch is ???</p>
+      </div>
+    );
+  }
+}
+export default Switch;
+```
+@[4](on state)
+@[*]()
+@ul()[true]
+- Add event handler for button...
+@ulend
+
+---
+
+```javascript
+class Switch extends React.Component {
+  constructor() {
+    super();
+    this.state = { on: false };
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.toggle}>Toggle</button>
+        <p>The switch is ???</p>
+      </div>
+    );
+  }
+  toggle = () => {
+    this.setState( { on: !this.state.on } );
+  }
+}
+export default Switch;
+```
+@ul()[true]
+- And finally the conditional rendering...
+@ulend
+
+
+---
+```javascript
+import React from 'react';
+
+class Switch extends React.Component {
+  constructor() {
+    super();
+    this.state = { on: false };
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.toggle}>Toggle</button>
+        <p>The switch is {this.state.on ? 'on' : 'off'}</p>
+      </div>
+    );
+  }
+  toggle = () => {
+    this.setState( { on: !this.state.on } );
+  }
+}
+export default Switch;
+```
+
+---
+@title[Contents]
+### Contents
+
+@ol[](false)
+- ...
+- State
+- Event Handling
+- Component Lifecycle
+- Conditional Rendering
+- **Previous State**
+@olend
 
 
 ---?color=black
