@@ -1089,7 +1089,6 @@ export default MyButton;
 
 ![](lectures/ReactJS/images/lifeCycle.png)
 
-
 @[](#1 constructor() - good for initialising state, etc. )
 @[](#2 render() )
 @[](#3 componentDidMount() )
