@@ -1089,15 +1089,6 @@ export default MyButton;
 
 ![](lectures/ReactJS/images/lifeCycle.png)
 
-```javascript
-```
-@[](#1 constructor() - good for initialising state, etc. )
-@[](#2 render() )
-@[](#3 componentDidMount() )
-@[](#4 render()    (if necessary))
-@[](#5 componentDidUpdate()  )
-@[](#6 componentWillUnmount() )
-
 @ul[](true)
 - We'll use those highlighted in green...
 @ulend
