@@ -1079,7 +1079,7 @@ export default MyButton;
   - @size[1.5em](mounting) - added to the DOM
   - @size[1.5em](updating) - updated 
   - @size[1.5em](unmounting) - removed from the DOM 
-- When a component lifecycle changes specific methods are called...
+- When a component lifecycle changes specific methods are called....
 @ulend
 
 
@@ -1089,6 +1089,8 @@ export default MyButton;
 
 ![](lectures/ReactJS/images/lifeCycle.png)
 
+```javascript
+```
 @[](#1 constructor() - good for initialising state, etc. )
 @[](#2 render() )
 @[](#3 componentDidMount() )
