@@ -1534,7 +1534,7 @@ class Clubs extends React.Component {
 
 ---
 
-![](lectures/React/images/Clubs.png)
+![](lectures/ReactJS/images/Clubs.png)
 ![](images/Clubs.png)
 
 ---
