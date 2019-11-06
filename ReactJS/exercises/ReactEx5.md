@@ -45,7 +45,7 @@ Download the *FileServer*  app from [here](/ReactJS/code) into your ReactJS repo
     from the data fetched from [http://localhost:5000/clubs.json](http://localhost:5000/clubs.json)
 
 
-## Part 3 - TeamScores
+## Part 3 - WeekScores
 
 1.	Examine the code for the component `<WeekScores>`.  It has state data for 6 EPL matches.  
 
@@ -55,7 +55,7 @@ Download the *FileServer*  app from [here](/ReactJS/code) into your ReactJS repo
 
 	Keep the state data in `WeekScores.js` for now.
 
-## Part 4 - Fetch TeamScores
+## Part 4 - Fetch WeekScores
 
 1.	Remove the state JSON data from the `<WeekScores>` component so the state looks like this:
 
