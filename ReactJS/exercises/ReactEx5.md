@@ -47,7 +47,7 @@ Download the *FileServer*  app from [here](/ReactJS/code) into your ReactJS repo
 
 ## Part 3 - WeekScores
 
-1.	Examine the code for the component `<WeekScores>`.  It has state data for 6 EPL matches.  
+1.	Examine the code for the component `<WeekScores>` [here](/ReactJS/code/WeekScores.js).  It has state data for 6 EPL matches.  
 
 1.	Modify the code to render this:
 
