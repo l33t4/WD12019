@@ -38,7 +38,7 @@ Download the *FileServer*  app from [here](/ReactJS/code) into your ReactJS repo
 
 ## Part 2 - Fetch Clubs  
 
-1.	Open and modify the code for the component `<ClubV2>` [<ClubV2>](https://github.com/barcaxi/WD12019/blob/master/ReactJS/code/ClubsV2.js) to render this:
+1.	Open and modify the code for the component `<ClubV2>` [ClubV2](https://github.com/barcaxi/WD12019/blob/master/ReactJS/code/ClubsV2.js) to render this:
 
 	![](../images/ClubsV2.png)
 
